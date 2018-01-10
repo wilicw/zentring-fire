@@ -12,4 +12,6 @@
 
 就... 打發時間阿
 
+如果有任何問題，或是你想幫助改善這個破爛專案，歡迎發 Issues 或 Pull requests ，我們並不會理你（誤
+
 By Zentring.net
