@@ -1,0 +1,154 @@
+/* line 9, ../sass/fire.scss */
+body {
+  color: #FFFFFF;
+  background-color: #111217;
+}
+/* line 13, ../sass/fire.scss */
+body .fire {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  height: 20vw;
+  width: 20vw;
+}
+/* line 21, ../sass/fire.scss */
+body .fire .flames {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translateX(-50%) rotate(45deg);
+}
+/* line 30, ../sass/fire.scss */
+body .fire .flames .flame {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background-color: #FFDC01;
+  border-radius: 1vw;
+}
+/* line 39, ../sass/fire.scss */
+body .fire .flames .flame:nth-child(2n + 1) {
+  animation: flameodd 0.5s ease-in infinite;
+}
+/* line 43, ../sass/fire.scss */
+body .fire .flames .flame:nth-child(2n) {
+  animation: flameeven 0.5s ease-in infinite;
+}
+/* line 47, ../sass/fire.scss */
+body .fire .flames .flame:nth-child(1) {
+  animation-delay: 0s;
+}
+/* line 51, ../sass/fire.scss */
+body .fire .flames .flame:nth-child(2) {
+  animation-delay: 0.125s;
+}
+/* line 55, ../sass/fire.scss */
+body .fire .flames .flame:nth-child(3) {
+  animation-delay: 0.25s;
+}
+/* line 59, ../sass/fire.scss */
+body .fire .flames .flame:nth-child(4) {
+  animation-delay: 0.375s;
+}
+/* line 65, ../sass/fire.scss */
+body .fire .logs {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 15%;
+}
+/* line 73, ../sass/fire.scss */
+body .fire .logs:after, body .fire .logs:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  background-color: #70392F;
+}
+/* line 86, ../sass/fire.scss */
+body .fire .logs:before {
+  transform: translate(-50%, -50%) rotate(-20deg);
+  background-color: #612E25;
+}
+
+@keyframes flameodd {
+  0%,
+  100% {
+    width: 0;
+    height: 0;
+  }
+  25% {
+    width: 100%;
+    height: 100%;
+  }
+  0% {
+    background-color: #FFDC01;
+    z-index: 1000000;
+  }
+  40% {
+    background-color: #FDAC01;
+    z-index: 1000000;
+  }
+  100% {
+    background-color: #F73B01;
+    z-index: -10;
+  }
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 1%;
+    bottom: 2%;
+  }
+  100% {
+    right: 150%;
+    bottom: 170%;
+  }
+}
+@keyframes flameeven {
+  0%,
+  100% {
+    width: 0;
+    height: 0;
+  }
+  25% {
+    width: 100%;
+    height: 100%;
+  }
+  0% {
+    background-color: #FFDC01;
+    z-index: 1000000;
+  }
+  40% {
+    background-color: #FDAC01;
+    z-index: 1000000;
+  }
+  100% {
+    background-color: #F73B01;
+    z-index: -10;
+  }
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 2%;
+    bottom: 1%;
+  }
+  100% {
+    right: 170%;
+    bottom: 150%;
+  }
+}
