@@ -13,11 +13,6 @@ foreach($data->allblock as $value){
 }
 
 $prehash = hash('sha512',$data->allblock[$end]->id.",".base64_encode($data->allblock[$end]->text));
-/*if($prehash!=$data->allblock[$end]->hash){
-  echo "block Chain Error";
-  exit();
-}*/
-
 $id = $end+1;
 $hash = hash('sha512', $id.",".base64_encode($wish).",".$prehash);
 $time = date("Y,m/d - h:i:sa");

@@ -34,12 +34,12 @@ function getblock(s) {
   }).done(function(data) {
     localStorage["block"] = data
     if(olddata.length<JSON.parse(localStorage["block"]).length){
-      var j = JSON.parse(localStorage["block"]).allblock.length - olddata.allblock.length
+      var j = JSON.parse(localStorage["block"]).length - olddata.length
       for(i=0;i<j;i++){
-　       getinfo(olddata.allblock.length + i)
+　       getinfo(olddata.length + i)
       }
     }
-    if(s!="no"){
+    if(s!=="no"){
       toastr.clear()
       toastr.success("<h3>區塊更新成功</h3>")
     }
@@ -48,8 +48,8 @@ function getblock(s) {
 
 function getinfo(n) {
   data = JSON.parse(localStorage["block"])
-  console.log(decodeURIComponent(atob(data.allblock[n].text)));
-  toastr.info('區塊 '+data.allblock[n].id+' 的願望是：'+ decodeURIComponent(atob(data.allblock[n].text)))
+  console.log(decodeURIComponent(atob(data[n].text)));
+  toastr.info('區塊 '+data[n].id+' 的願望是：'+ decodeURIComponent(atob(data[n].text)))
 }
 
 setInterval("getblock(\"no\")",2000);
