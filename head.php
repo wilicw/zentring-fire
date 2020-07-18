@@ -1,13 +1,9 @@
 <?php
-
-
 // Cross-Origin Resource Sharing Header
 header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept');
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,13 +13,14 @@ header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept');
   <meta name="og:title" content="Zentring Fire 許願火">
   <meta name="og:description" content="Zentring Fire 許願火，第一個採用區塊鍊的許願火，讓你心想事成">
   <meta name="og:type" content="website">
-  <meta name="og:url" content="https://zentring.net/fire/">
-  <meta name="og:image" content="https://zentring.net/fire/fire.png">
+  <meta name="og:url" content="https://fire.dev.zentring.net/">
+  <meta name="og:image" content="https://fire.dev.zentring.net/fire.png">
   <title>Zentring Fire 許願火</title>
-  <script src="https://zentring.net/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" href="https://zentring.net/bootstrap4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="toastr.min.css">
-  <script src="https://zentring.net/bootstrap4/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="toastr.min.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/fire.css">
 </head>

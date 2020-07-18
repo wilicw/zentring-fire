@@ -1,4 +1,4 @@
-<? include 'head.php';?>
+<?php include 'head.php';?>
 <script src="allwish.js"></script>
 <br>
 <br>

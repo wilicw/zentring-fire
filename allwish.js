@@ -19,15 +19,15 @@ function getinfo() {
   }).done(function(data) {
 	  //console.log(data);
     data = JSON.parse(data)
-    var j = data.allblock.length
+    var j = data.length
     for(i=0;i<j;i++){
-		id = data.allblock[i].id;
+		id = data[i].id;
 		if(id!=0){
-			id = data.allblock[i].id;
-			text = escapeHtml(decodeURIComponent(atob(data.allblock[i].text)));
-			hash = data.allblock[i].hash;
-			time = data.allblock[i].time;
-			$("#allbody").prepend('<br><hr><div style="color:#000000;" class="card"><div class="card-header">Block #'+id+' <cite>'+time+' UTC</cite></div><div class="card-body"><blockquote class="blockquote mb-0"><p>'+text+'</p><footer class="blockquote-footer"><cite>'+hash+'</cite></footer></blockquote></div></div>')
+			id = data[i].id;
+			text = escapeHtml(decodeURIComponent(atob(data[i].text)));
+			hash = data[i].hash;
+			time = data[i].time;
+			$("#allbody").prepend('<br><hr><div style="color:#000000;" class="card"><div class="card-header">Block #'+id+' <cite>'+time+' UTC+1</cite></div><div class="card-body"><blockquote class="blockquote mb-0"><p>'+text+'</p><footer class="blockquote-footer"><cite>'+hash+'</cite></footer></blockquote></div></div>')
 		}　
     }
   })
