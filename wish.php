@@ -1,4 +1,4 @@
-<?
+<?php
 $wish = base64_encode($_POST['wish']);
 $block0hash = "137cf7d5da66f94af938c8a98d87e6102dd96ba88c572732d06be530e9d10b2d32665856401a1fb17c4fa2e74ffc24f0c5a8c9ff2a5a16953588bed5471c3410";
 $data = file_get_contents("block.json");
